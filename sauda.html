@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com o Sistema</title>
+</head>
+
+<body>
+
+    <h1><span id="saudaJs"></span> Juriscreison</h1>
+
+    <script>
+        // Obtem a hora atual de sistema
+        let hora = new Date().getHours()
+        // Define é mensagem e a imagem com base a hora
+        let mensagem
+        // Condição
+        if (hora >= 6 && hora < 12) 
+        {
+            mensagem = "Bom dia!"
+        }
+        else if (hora >= 12 && hora < 18)
+        {
+            mensagem = "Boa tarde!"
+        }
+        else 
+        {
+            mensagem = "Boa noite!"
+        }
+
+        // Selecione o elemento pelo seu ID
+        var elemento = document.getElementById("saudaJs")
+        // Aplica o texto no elemento
+        elemento.innerHTML = mensagem
+    </script>
+
+</body>
+
+</html>
